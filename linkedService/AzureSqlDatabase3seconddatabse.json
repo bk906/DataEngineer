@@ -1,0 +1,17 @@
+{
+	"name": "AzureSqlDatabase3seconddatabse",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "textsecpndserver.database.windows.net",
+			"database": "textdbsecond",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "second",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQERFMTIwMDcxLUVCQkEtNDBBQS1BRjQ4LTFCOEFDNzA2Q0I3M19kNTU2YWVhYy01MTQxLTRlZTYtYmYwMC0xNWFmNzNhNWEwOTgiDQp9"
+		}
+	}
+}

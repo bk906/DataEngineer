@@ -1,0 +1,37 @@
+{
+	"name": "03_procedurewithinputparameter",
+	"properties": {
+		"description": "executing the storedprocedure with input paramet only canada region",
+		"activities": [
+			{
+				"name": "Execute inputprocedure",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[LoadAddressDatawithparameter]",
+					"storedProcedureParameters": {
+						"countryname": {
+							"value": "United States",
+							"type": "String"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-08-29T06:15:42Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,31 @@
+{
+	"name": "02_Procedure",
+	"properties": {
+		"description": "executing the procedure \n",
+		"activities": [
+			{
+				"name": "Execute procedure",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[LoadAddressData]"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-08-29T05:05:00Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

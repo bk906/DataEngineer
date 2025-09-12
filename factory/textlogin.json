@@ -1,0 +1,9 @@
+{
+	"name": "textlogin",
+	"location": "westus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "55dbdaa9-0a9b-4af6-a4ad-a54ff8a8f542",
+		"tenantId": "ac79e5a8-e0e4-434b-a292-2c89b5c28366"
+	}
+}

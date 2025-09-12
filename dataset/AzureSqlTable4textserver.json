@@ -1,0 +1,43 @@
+{
+	"name": "AzureSqlTable4textserver",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase3seconddatabse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "StudentId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "StudentName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PhoneNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Address",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Email",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Course",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CSVCustomerTable"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
