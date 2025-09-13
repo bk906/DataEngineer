@@ -1,0 +1,81 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "textlogin"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase3seconddatabse_password": {
+			"value": ""
+		},
+		"Gen2AzureDataLakeStorage3_accountKey": {
+			"value": ""
+		},
+		"LSJoinDFAzureSqlDatabase3_password": {
+			"value": ""
+		},
+		"multifilesAzureDataLakeStorage3_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://textlogin.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://textlogin.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "textserver.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "textfordb"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "textlogin"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"value": "textserver.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "textfordb"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"value": "textlogin"
+		},
+		"AzureSqlDatabase3seconddatabse_properties_typeProperties_server": {
+			"value": "textsecpndserver.database.windows.net"
+		},
+		"AzureSqlDatabase3seconddatabse_properties_typeProperties_database": {
+			"value": "textdbsecond"
+		},
+		"AzureSqlDatabase3seconddatabse_properties_typeProperties_userName": {
+			"value": "second"
+		},
+		"Gen2AzureDataLakeStorage3_properties_typeProperties_url": {
+			"value": "https://textlogin.dfs.core.windows.net/"
+		},
+		"LSJoinDFAzureSqlDatabase3_properties_typeProperties_server": {
+			"value": "textserver.database.windows.net"
+		},
+		"LSJoinDFAzureSqlDatabase3_properties_typeProperties_database": {
+			"value": "textfordb"
+		},
+		"LSJoinDFAzureSqlDatabase3_properties_typeProperties_userName": {
+			"value": "textlogin"
+		},
+		"multifilesAzureDataLakeStorage3_properties_typeProperties_url": {
+			"value": "https://textlogin.dfs.core.windows.net/"
+		}
+	}
+}

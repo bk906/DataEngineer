@@ -1,0 +1,250 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "textlogin"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
+		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
+		"AzureSqlDatabase2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase2'"
+		},
+		"AzureSqlDatabase3seconddatabse_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase3seconddatabse'"
+		},
+		"Gen2AzureDataLakeStorage3_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'Gen2AzureDataLakeStorage3'"
+		},
+		"LSJoinDFAzureSqlDatabase3_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LSJoinDFAzureSqlDatabase3'"
+		},
+		"multifilesAzureDataLakeStorage3_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'multifilesAzureDataLakeStorage3'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://textlogin.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://textlogin.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "textserver.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "textfordb"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "textlogin"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "textserver.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "textfordb"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "textlogin"
+		},
+		"AzureSqlDatabase3seconddatabse_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "textsecpndserver.database.windows.net"
+		},
+		"AzureSqlDatabase3seconddatabse_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "textdbsecond"
+		},
+		"AzureSqlDatabase3seconddatabse_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "second"
+		},
+		"Gen2AzureDataLakeStorage3_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://textlogin.dfs.core.windows.net/"
+		},
+		"LSJoinDFAzureSqlDatabase3_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "textserver.database.windows.net"
+		},
+		"LSJoinDFAzureSqlDatabase3_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "textfordb"
+		},
+		"LSJoinDFAzureSqlDatabase3_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "textlogin"
+		},
+		"multifilesAzureDataLakeStorage3_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://textlogin.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "textlogin_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"AzureDataLakeStorage2_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
+					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
+					"AzureSqlDatabase2_password": {
+						"value": "[parameters('AzureSqlDatabase2_password')]"
+					},
+					"AzureSqlDatabase3seconddatabse_password": {
+						"value": "[parameters('AzureSqlDatabase3seconddatabse_password')]"
+					},
+					"Gen2AzureDataLakeStorage3_accountKey": {
+						"value": "[parameters('Gen2AzureDataLakeStorage3_accountKey')]"
+					},
+					"LSJoinDFAzureSqlDatabase3_password": {
+						"value": "[parameters('LSJoinDFAzureSqlDatabase3_password')]"
+					},
+					"multifilesAzureDataLakeStorage3_accountKey": {
+						"value": "[parameters('multifilesAzureDataLakeStorage3_accountKey')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage2_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage2_properties_typeProperties_url')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabase3seconddatabse_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase3seconddatabse_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase3seconddatabse_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase3seconddatabse_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase3seconddatabse_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase3seconddatabse_properties_typeProperties_userName')]"
+					},
+					"Gen2AzureDataLakeStorage3_properties_typeProperties_url": {
+						"value": "[parameters('Gen2AzureDataLakeStorage3_properties_typeProperties_url')]"
+					},
+					"LSJoinDFAzureSqlDatabase3_properties_typeProperties_server": {
+						"value": "[parameters('LSJoinDFAzureSqlDatabase3_properties_typeProperties_server')]"
+					},
+					"LSJoinDFAzureSqlDatabase3_properties_typeProperties_database": {
+						"value": "[parameters('LSJoinDFAzureSqlDatabase3_properties_typeProperties_database')]"
+					},
+					"LSJoinDFAzureSqlDatabase3_properties_typeProperties_userName": {
+						"value": "[parameters('LSJoinDFAzureSqlDatabase3_properties_typeProperties_userName')]"
+					},
+					"multifilesAzureDataLakeStorage3_properties_typeProperties_url": {
+						"value": "[parameters('multifilesAzureDataLakeStorage3_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "textlogin_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'textlogin_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "textlogin_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'textlogin_ArmTemplate_1')]"
+			]
+		}
+	]
+}
